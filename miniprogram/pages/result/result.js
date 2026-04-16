@@ -13,10 +13,19 @@ Page({
     loading: true
   },
 
-  onLoad(options) {
-    const petId = options.petId || 'cat'
-    const pet = pets[petId]
-    this.setData({ pet })
+  onLoad: function(options) {
+    var petId = options.petId || 'cat'
+    var pet = pets[petId]
+    this.setData({ pet: pet })
+    var that = this
+    setTimeout(function() {
+      that.setData({ loading: false })
+    }, 800)
+  },
 
-    setTimeout(() => {
-      this.setData
+  onGenerateCard: function() {
+    wx.redirectTo({
+      url: '/pages/card/card'
+    })
+  }
+})
