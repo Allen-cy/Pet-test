@@ -167,6 +167,12 @@
       "type": "file"
     },
     {
+      "path": "miniprogram/pages/index/index.wxss",
+      "accessCount": 3,
+      "lastAccessed": 1776336509307,
+      "type": "file"
+    },
+    {
       "path": "vercel.json",
       "accessCount": 2,
       "lastAccessed": 1776323439580,
@@ -188,6 +194,12 @@
       "path": "src/components/Home.tsx",
       "accessCount": 2,
       "lastAccessed": 1776326316456,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/pages/result/result.wxss",
+      "accessCount": 2,
+      "lastAccessed": 1776336510867,
       "type": "file"
     },
     {
@@ -353,12 +365,6 @@
       "type": "file"
     },
     {
-      "path": "miniprogram/pages/index/index.wxss",
-      "accessCount": 1,
-      "lastAccessed": 1776326686351,
-      "type": "file"
-    },
-    {
       "path": "miniprogram/pages/index/index.ts",
       "accessCount": 1,
       "lastAccessed": 1776326687473,
@@ -386,12 +392,6 @@
       "path": "miniprogram/pages/result/result.wxml",
       "accessCount": 1,
       "lastAccessed": 1776326745557,
-      "type": "file"
-    },
-    {
-      "path": "miniprogram/pages/result/result.wxss",
-      "accessCount": 1,
-      "lastAccessed": 1776326746613,
       "type": "file"
     },
     {

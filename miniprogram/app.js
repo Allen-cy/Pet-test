@@ -8,4 +8,6 @@ App({
   },
   onLaunch() {
     // 生成会话ID
-    this.global
+    this.globalData.sessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9)
+  }
+})

@@ -1,6 +1,6 @@
 .container {
   min-height: 100vh;
-  background: linear-gradient(to bottom, {{pet.bgGradientStart}}, {{pet.bgGradientEnd}});
+  background: linear-gradient(to bottom, #2C2420, #6B4E37);
   color: white;
   padding: 60rpx 30rpx 200rpx;
 }
@@ -25,7 +25,9 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .loading-text {
@@ -117,4 +119,26 @@
   left: 0;
   right: 0;
   padding: 40rpx;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.cta-btn {
+  width: 100%;
+  padding: 28rpx;
+  background-color: #E8C9A0;
+  color: #1c1c19;
+  border-radius: 60rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cta-hint {
+  display: block;
+  text-align: center;
+  margin-top: 24rpx;
+  font-size: 20rpx;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

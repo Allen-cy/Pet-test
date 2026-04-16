@@ -100,3 +100,11 @@
 
 .start-btn {
   width: 100%;
+  padding: 28rpx;
+  background-color: #72553d;
+  color: white;
+  border-radius: 60rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+}
