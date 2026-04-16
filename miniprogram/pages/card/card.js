@@ -14,7 +14,7 @@ Page({
     const ctx = wx.createCanvasContext('shareCard')
 
     // 渐变背景
-    const gradients: Record<string, [string, string]> = {
+    const gradients = {
       cat: ['#2C2420', '#6B4E37'],
       dog: ['#1A2E1A', '#4A7040'],
       rabbit: ['#2A1F2E', '#5E4480'],
@@ -44,17 +44,17 @@ Page({
 
     // Emoji
     ctx.setFontSize(80)
-    const emojis: Record<string, string> = { cat: '🐈', dog: '🐕', rabbit: '🐇', small: '🐹', fish: '🐠', bird: '🦜' }
+    const emojis = { cat: '🐈', dog: '🐕', rabbit: '🐇', small: '🐹', fish: '🐠', bird: '🦜' }
     ctx.fillText(emojis[petId] || '🐈', 160, 200)
 
     // 宠物名
-    const names: Record<string, string> = { cat: '猫', dog: '狗', rabbit: '兔子', small: '仓鼠', fish: '鱼', bird: '鸟' }
+    const names = { cat: '猫', dog: '狗', rabbit: '兔子', small: '仓鼠', fish: '鱼', bird: '鸟' }
     ctx.setFillStyle('#ffffff')
     ctx.setFontSize(32)
     ctx.fillText(names[petId] || '猫', 160, 370)
 
     // 标题
-    const titles: Record<string, string> = {
+    const titles = {
       cat: '独立灵魂的安静陪伴者',
       dog: '忠诚热烈的灵魂守护者',
       rabbit: '温婉细腻的无声倾听者',
@@ -84,6 +84,10 @@ Page({
             wx.showToast({ title: '保存失败', icon: 'none' })
           }
         })
+      },
+      fail: () => {
+        wx.hideLoading()
+        wx.showToast({ title: '保存失败', icon: 'none' })
       }
     })
   },
@@ -92,6 +96,7 @@ Page({
     wx.showShareMenu({
       withShareTicket: true
     })
+    wx.showToast({ title: '请点击右上角分享', icon: 'none' })
   },
 
   onRestart() {
