@@ -1,0 +1,279 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1776322867129,
+  "projectRoot": "/Users/allen/Desktop/Vibe Coding/Project6-Pet_test",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "react",
+        "version": "19.0.0",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "19.0.0",
+        "category": "frontend"
+      },
+      {
+        "name": "vite",
+        "version": "6.2.0",
+        "category": "build"
+      },
+      {
+        "name": "express",
+        "version": "4.21.2",
+        "category": "backend"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": null,
+    "lintCommand": "npm run lint",
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "vite --port=3000 --host=0.0.0.0",
+      "build": "vite build",
+      "preview": "vite preview",
+      "clean": "rm -rf dist",
+      "lint": "tsc --noEmit"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "src"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 3,
+      "lastAccessed": 1776322866370,
+      "keyFiles": [
+        "App.tsx",
+        "index.css",
+        "main.tsx"
+      ]
+    },
+    "src/components": {
+      "path": "src/components",
+      "purpose": "UI components",
+      "fileCount": 5,
+      "lastAccessed": 1776322866371,
+      "keyFiles": [
+        "Card.tsx",
+        "Home.tsx",
+        "Report.tsx"
+      ]
+    },
+    "src/data": {
+      "path": "src/data",
+      "purpose": "Data files",
+      "fileCount": 2,
+      "lastAccessed": 1776322866794,
+      "keyFiles": [
+        "pets.ts",
+        "questions.ts"
+      ]
+    },
+    "src/utils": {
+      "path": "src/utils",
+      "purpose": "Utility functions",
+      "fileCount": 1,
+      "lastAccessed": 1776322866794,
+      "keyFiles": [
+        "score.ts"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": ".env.example",
+      "accessCount": 4,
+      "lastAccessed": 1776323437843,
+      "type": "file"
+    },
+    {
+      "path": "src/App.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1776323402352,
+      "type": "file"
+    },
+    {
+      "path": "supabase/migrations/001_initial.sql",
+      "accessCount": 3,
+      "lastAccessed": 1776324080613,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Result.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1776323140260,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Report.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1776323148080,
+      "type": "file"
+    },
+    {
+      "path": "vercel.json",
+      "accessCount": 2,
+      "lastAccessed": 1776323439580,
+      "type": "file"
+    },
+    {
+      "path": ".env",
+      "accessCount": 2,
+      "lastAccessed": 1776324252902,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 1,
+      "lastAccessed": 1776323124416,
+      "type": "directory"
+    },
+    {
+      "path": "src/data/pets.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776323134278,
+      "type": "file"
+    },
+    {
+      "path": "src/data/questions.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776323140187,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Test.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776323140219,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Card.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776323148045,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 1,
+      "lastAccessed": 1776323148141,
+      "type": "file"
+    },
+    {
+      "path": "src/utils/score.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776323148193,
+      "type": "file"
+    },
+    {
+      "path": "src/lib/supabase.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776323314000,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/api/save-result.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776323315219,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/api/pets.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776323316295,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/api/questions.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776323319745,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/api/unlock-report.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776323320795,
+      "type": "file"
+    },
+    {
+      "path": "api/save-result.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776323359323,
+      "type": "file"
+    },
+    {
+      "path": "api/pets.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776323360381,
+      "type": "file"
+    },
+    {
+      "path": "api/questions.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776323361515,
+      "type": "file"
+    },
+    {
+      "path": "api/unlock-report.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776323362617,
+      "type": "file"
+    },
+    {
+      "path": "src/lib/api.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776323376417,
+      "type": "file"
+    },
+    {
+      "path": "vite.config.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776323453215,
+      "type": "file"
+    },
+    {
+      "path": "DEPLOY.md",
+      "accessCount": 1,
+      "lastAccessed": 1776323497503,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
