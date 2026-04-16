@@ -48,7 +48,7 @@ const questions = [
     { text: "无所谓，习惯了就好", score: {dog:3,cat:3,rabbit:2,small:1,fish:0,bird:0} },
     { text: "觉得毛茸茸的到处都是也很可爱", score: {dog:2,cat:3,rabbit:3,small:0,fish:0,bird:0} }
   ]},
-  { id: 9, dim: "I", text: "你希望宠物在你的生活中扮演什么角色？", options: [
+  { id: 9, dim: "I", text: "你希望宠物在你生活中扮演什么角色？", options: [
     { text: "形影不离的家人", score: {dog:3,cat:1,rabbit:1,small:0,fish:0,bird:1} },
     { text: "保持距离的室友", score: {dog:0,cat:3,rabbit:1,small:1,fish:2,bird:0} },
     { text: "需要呵护的小宝宝", score: {dog:1,cat:1,rabbit:3,small:2,fish:0,bird:1} },
@@ -94,7 +94,7 @@ const questions = [
     { text: "安静地待在旁边陪着我", score: {dog:1,cat:3,rabbit:3,small:1,fish:1,bird:0} },
     { text: "自己去玩，不要打扰我", score: {dog:0,cat:2,rabbit:1,small:3,fish:3,bird:1} },
     { text: "偶尔过来求摸摸，互动一下", score: {dog:2,cat:2,rabbit:1,small:1,fish:0,bird:2} },
-    { text: "最好能和我一起\"工作\"", score: {dog:3,cat:0,rabbit:0,small:0,fish:0,bird:1} }
+    { text: "最好能和我一起工作", score: {dog:3,cat:0,rabbit:0,small:0,fish:0,bird:1} }
   ]},
   { id: 17, dim: "Q", text: "你对宠物寿命的看法是？", options: [
     { text: "希望它能陪伴我越久越好", score: {dog:3,cat:3,rabbit:1,small:0,fish:1,bird:3} },
@@ -112,17 +112,24 @@ const questions = [
 
 // 计算结果
 function calcResult(answers) {
-  const totals = { dog: 0, cat: 0, rabbit: 0, small: 0, fish: 0, bird: 0 }
-  answers.forEach(({ questionId, optionIndex }) => {
-    const q = questions.find(q => q.id === questionId)
+  var totals = { dog: 0, cat: 0, rabbit: 0, small: 0, fish: 0, bird: 0 }
+  answers.forEach(function(item) {
+    var q = null
+    for (var i = 0; i < questions.length; i++) {
+      if (questions[i].id === item.questionId) {
+        q = questions[i]
+        break
+      }
+    }
     if (q) {
-      const scores = q.options[optionIndex].score
-      Object.keys(scores).forEach(pet => {
+      var scores = q.options[item.optionIndex].score
+      Object.keys(scores).forEach(function(pet) {
         totals[pet] += scores[pet]
       })
     }
   })
-  return Object.entries(totals).sort((a, b) => b[1] - a[1])[0][0]
+  var result = Object.entries(totals).sort(function(a, b) { return b[1] - a[1] })
+  return result[0][0]
 }
 
 Page({
@@ -130,49 +137,66 @@ Page({
     questions: [],
     currentIndex: 0,
     answers: [],
-    hasAnswered: false
+    hasAnswered: false,
+    progress: 0,
+    isLastQuestion: false
   },
 
-  onLoad() {
-    // 初始化题目，添加字母选项
-    const formattedQuestions = questions.map((q, qi) => ({
-      ...q,
-      options: q.options.map((o, oi) => ({
-        ...o,
-        letter: String.fromCharCode(65 + oi)
-      }))
-    }))
+  onLoad: function() {
+    var that = this
+    var formattedQuestions = []
+    questions.forEach(function(q) {
+      var options = q.options.map(function(o, oi) {
+        return {
+          text: o.text,
+          score: o.score,
+          letter: String.fromCharCode(65 + oi),
+          selected: false
+        }
+      })
+      formattedQuestions.push({
+        id: q.id,
+        dim: q.dim,
+        text: q.text,
+        options: options
+      })
+    })
     this.setData({ questions: formattedQuestions })
+    this.updateProgress()
   },
 
-  get currentQuestion() {
-    return this.data.questions[this.data.currentIndex]
+  updateProgress: function() {
+    var q = this.data.questions
+    var idx = this.data.currentIndex
+    var progress = q.length > 0 ? ((idx + 1) / q.length) * 100 : 0
+    var isLast = idx === q.length - 1
+    this.setData({
+      progress: progress,
+      isLastQuestion: isLast
+    })
   },
 
-  get progress() {
-    return ((this.data.currentIndex + 1) / this.data.questions.length) * 100
-  },
-
-  get isLastQuestion() {
-    return this.data.currentIndex === this.data.questions.length - 1
-  },
-
-  onSelectOption(e) {
-    const index = e.currentTarget.dataset.index
-    const question = this.data.questions[this.data.currentIndex]
-    const newAnswers = [...this.data.answers]
-    const existingIndex = newAnswers.findIndex(a => a.questionId === question.id)
-
-    if (existingIndex >= 0) {
-      newAnswers[existingIndex] = { questionId: question.id, optionIndex: index }
+  onSelectOption: function(e) {
+    var index = e.currentTarget.dataset.index
+    var currentQ = this.data.questions[this.data.currentIndex]
+    var newAnswers = this.data.answers.slice()
+    var existIdx = -1
+    for (var i = 0; i < newAnswers.length; i++) {
+      if (newAnswers[i].questionId === currentQ.id) {
+        existIdx = i
+        break
+      }
+    }
+    if (existIdx >= 0) {
+      newAnswers[existIdx] = { questionId: currentQ.id, optionIndex: index }
     } else {
-      newAnswers.push({ questionId: question.id, optionIndex: index })
+      newAnswers.push({ questionId: currentQ.id, optionIndex: index })
     }
 
-    // 更新选项选中状态
-    const questions = this.data.questions
-    questions[this.data.currentIndex].options.forEach((opt, i) => {
-      opt.selected = i === index
+    // update options selected state
+    var questions = this.data.questions
+    questions[this.data.currentIndex].options.forEach(function(opt, i) {
+      opt.selected = (i === index)
     })
 
     this.setData({
@@ -181,22 +205,22 @@ Page({
       questions: questions
     })
 
-    // 自动进入下一题
     if (!this.data.isLastQuestion) {
-      setTimeout(() => {
-        this.setData({ currentIndex: this.data.currentIndex + 1 })
+      var that = this
+      setTimeout(function() {
+        that.setData({ currentIndex: that.data.currentIndex + 1 })
+        that.updateProgress()
       }, 300)
     }
   },
 
-  onFinish() {
-    const petId = calcResult(this.data.answers)
-    const app = getApp()
+  onFinish: function() {
+    var petId = calcResult(this.data.answers)
+    var app = getApp()
     app.globalData.petId = petId
     app.globalData.answers = this.data.answers
-
     wx.redirectTo({
-      url: `/pages/result/result?petId=${petId}`
+      url: '/pages/result/result?petId=' + petId
     })
   }
 })

@@ -65,7 +65,9 @@ Page({
     ctx.setFontSize(14)
     ctx.fillText(titles[petId] || '', 160, 410)
 
-    ctx.draw()
+    ctx.draw(true, () => {
+      // Drawing complete
+    })
   },
 
   onSave() {

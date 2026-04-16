@@ -203,6 +203,24 @@
       "type": "file"
     },
     {
+      "path": "miniprogram/pages/report/report.wxss",
+      "accessCount": 2,
+      "lastAccessed": 1776336839075,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/pages/report/report.wxml",
+      "accessCount": 2,
+      "lastAccessed": 1776336839126,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/pages/index/index.wxml",
+      "accessCount": 2,
+      "lastAccessed": 1776336852788,
+      "type": "file"
+    },
+    {
       "path": "",
       "accessCount": 1,
       "lastAccessed": 1776323124416,
@@ -359,12 +377,6 @@
       "type": "file"
     },
     {
-      "path": "miniprogram/pages/index/index.wxml",
-      "accessCount": 1,
-      "lastAccessed": 1776326685278,
-      "type": "file"
-    },
-    {
       "path": "miniprogram/pages/index/index.ts",
       "accessCount": 1,
       "lastAccessed": 1776326687473,
@@ -401,21 +413,9 @@
       "type": "file"
     },
     {
-      "path": "miniprogram/pages/report/report.wxml",
-      "accessCount": 1,
-      "lastAccessed": 1776326793389,
-      "type": "file"
-    },
-    {
       "path": "miniprogram/pages/report/report.ts",
       "accessCount": 1,
       "lastAccessed": 1776326794678,
-      "type": "file"
-    },
-    {
-      "path": "miniprogram/pages/report/report.wxss",
-      "accessCount": 1,
-      "lastAccessed": 1776326795759,
       "type": "file"
     }
   ],
