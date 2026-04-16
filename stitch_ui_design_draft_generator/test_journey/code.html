@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Pet Fate - Discovery Journey</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#ebe8e3",
+                    "tertiary-fixed-dim": "#e0c299",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#4f453f",
+                    "surface-container-highest": "#e5e2dd",
+                    "on-background": "#1c1c19",
+                    "secondary-fixed": "#bff1a0",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#31302d",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#fedeb3",
+                    "on-primary-fixed": "#2b1705",
+                    "primary": "#72553d",
+                    "on-primary-container": "#fff9f7",
+                    "on-primary-fixed-variant": "#5c412b",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#fcf9f4",
+                    "background": "#fcf9f4",
+                    "surface-dim": "#dcdad5",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#e6bfa2",
+                    "primary-fixed-dim": "#e6bfa2",
+                    "surface-container-low": "#f6f3ee",
+                    "on-secondary-fixed": "#082100",
+                    "on-tertiary-fixed": "#281801",
+                    "outline": "#81746e",
+                    "secondary-fixed-dim": "#a4d486",
+                    "on-tertiary-fixed-variant": "#584324",
+                    "tertiary": "#6e5736",
+                    "surface-container": "#f0ede9",
+                    "inverse-on-surface": "#f3f0eb",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#886f4c",
+                    "primary-fixed": "#ffdcc3",
+                    "secondary": "#3f6928",
+                    "outline-variant": "#d3c3bc",
+                    "on-secondary-container": "#456f2e",
+                    "secondary-container": "#bff1a0",
+                    "on-surface": "#1c1c19",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#fff9f6",
+                    "on-secondary-fixed-variant": "#285012",
+                    "surface-variant": "#e5e2dd",
+                    "surface-tint": "#765840",
+                    "primary-container": "#8d6d54",
+                    "surface": "#fcf9f4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .serif-text {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col items-center selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation (Shell suppressed for transactional journey) -->
+<header class="w-full fixed top-0 z-50 bg-background/80 backdrop-blur-md">
+<div class="max-w-screen-xl mx-auto px-6 py-6 flex flex-col gap-4">
+<div class="flex justify-between items-end">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome">auto_awesome</span>
+<span class="serif-text italic text-xl tracking-tight text-primary">Your Pet Fate</span>
+</div>
+<div class="font-body font-bold text-xs tracking-widest text-primary/60 uppercase">
+                    Question 01 / 18
+                </div>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[5.5%] rounded-full transition-all duration-700 ease-out"></div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full max-w-2xl mx-auto px-6 pt-32 pb-12 flex flex-col justify-center">
+<!-- Decoration / Mood Image -->
+<div class="mb-12 flex justify-center">
+<div class="relative w-48 h-48">
+<div class="absolute inset-0 bg-secondary-container/20 rounded-xl blur-3xl"></div>
+<img alt="Minimalist study" class="w-full h-full object-cover rounded-xl shadow-sm relative z-10" data-alt="A soft-focus, minimalist desk scene with a ceramic mug and a single sunlit leaf shadow on a beige wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxn1hiCOmInWmU5SfvA28HAftnkFKfb4ncn5Kwc6FyM7IZXJ5BNjpnhR-LxGLrCPmZGjRzIGzLtcZn8X-yF0MS8UiAcMRVFdVoW4gugn1Lg9SnIB4ncooz9WPC7Dr4Lv3U9V6ff1qsUvvaSndlfzhhitftx6be_xKGnNaqBzPcvYY3DY0NZIbLgQcB309XA-LDWopiMcluAerGYxR5IJbqVafOmF-Dovay0KTWXNryVIE_y4-k1cXHy4oZ36xmKM-mB3Mc68h5670"/>
+</div>
+</div>
+<!-- Question Section -->
+<section class="text-center mb-12">
+<h1 class="serif-text text-4xl md:text-5xl text-on-surface font-normal leading-tight mb-4">
+                你的日常作息节奏是？
+            </h1>
+<p class="text-on-surface-variant font-body text-lg">
+                诚实面对内心，感受你最真实的生活律动。
+            </p>
+</section>
+<!-- Options Bento/Stack -->
+<div class="grid grid-cols-1 gap-4 w-full">
+<!-- Option 1 -->
+<button class="group w-full text-left p-6 bg-surface-container-lowest hover:bg-surface-container-high rounded-lg transition-all duration-300 flex items-center justify-between border border-transparent hover:border-outline-variant/30">
+<div class="flex items-center gap-6">
+<span class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-body font-bold text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">A</span>
+<span class="text-xl font-body font-medium text-on-surface">非常规律，像精密运行的钟表</span>
+</div>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 text-primary transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<!-- Option 2 -->
+<button class="group w-full text-left p-6 bg-surface-container-lowest hover:bg-surface-container-high rounded-lg transition-all duration-300 flex items-center justify-between border border-transparent hover:border-outline-variant/30">
+<div class="flex items-center gap-6">
+<span class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-body font-bold text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">B</span>
+<span class="text-xl font-body font-medium text-on-surface">大致规律，偶尔会有些小惊喜</span>
+</div>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 text-primary transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<!-- Option 3 -->
+<button class="group w-full text-left p-6 bg-surface-container-lowest hover:bg-surface-container-high rounded-lg transition-all duration-300 flex items-center justify-between border border-transparent hover:border-outline-variant/30">
+<div class="flex items-center gap-6">
+<span class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-body font-bold text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">C</span>
+<span class="text-xl font-body font-medium text-on-surface">不太规律，随当下的心情而波动</span>
+</div>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 text-primary transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<!-- Option 4 -->
+<button class="group w-full text-left p-6 bg-surface-container-lowest hover:bg-surface-container-high rounded-lg transition-all duration-300 flex items-center justify-between border border-transparent hover:border-outline-variant/30">
+<div class="flex items-center gap-6">
+<span class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-body font-bold text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">D</span>
+<span class="text-xl font-body font-medium text-on-surface">完全随心，讨厌任何形式的计划</span>
+</div>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 text-primary transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Secondary Actions -->
+<footer class="mt-12 flex justify-center items-center gap-8">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-sm transition-transform group-hover:-translate-x-1" data-icon="arrow_back">arrow_back</span>
+<span class="font-body text-sm font-semibold tracking-wide uppercase">Previous</span>
+</button>
+<div class="h-4 w-px bg-outline-variant/30"></div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="font-body text-sm font-semibold tracking-wide uppercase">Skip Question</span>
+</button>
+</footer>
+</main>
+<!-- Background Subtle Textures -->
+<div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+<div class="absolute top-[-10%] right-[-5%] w-[40rem] h-[40rem] bg-secondary-fixed-dim/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[5%] left-[-10%] w-[35rem] h-[35rem] bg-tertiary-fixed/10 rounded-full blur-[100px]"></div>
+</div>
+<!-- Script Placeholder for literal icon transcription -->
+<!-- As requested, no functional JS, but ensuring Material Icons are literal in spans -->
+</body></html>

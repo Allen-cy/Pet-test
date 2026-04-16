@@ -7,6 +7,61 @@ export default function Card({ petId, onRestart }: { petId: string, onRestart: (
   const pet = pets[petId as keyof typeof pets];
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
+  const handleSaveToAlbum = async () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    try {
+      const dataUrl = canvas.toDataURL('image/png');
+      const link = document.createElement('a');
+      link.download = `宠物缘分-${pet.name}.png`;
+      link.href = dataUrl;
+      link.click();
+    } catch (error) {
+      console.error('保存失败:', error);
+      alert('保存失败，请重试');
+    }
+  };
+
+  const handleShare = async () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    try {
+      const dataUrl = canvas.toDataURL('image/png');
+      const blob = await (await fetch(dataUrl)).blob();
+
+      if (navigator.share && navigator.canShare) {
+        const file = new File([blob], `宠物缘分-${pet.name}.png`, { type: 'image/png' });
+        if (navigator.canShare({ files: [file] })) {
+          await navigator.share({
+            title: '宠物缘分测试',
+            text: `我的宠物缘分是${pet.name}！${pet.title}`,
+            files: [file]
+          });
+          return;
+        }
+      }
+
+      // Fallback: 复制图片到剪贴板
+      try {
+        await navigator.clipboard.write([
+          new ClipboardItem({ 'image/png': blob })
+        ]);
+        alert('图片已复制到剪贴板');
+      } catch {
+        // 复制失败则下载
+        const link = document.createElement('a');
+        link.download = `宠物缘分-${pet.name}.png`;
+        link.href = dataUrl;
+        link.click();
+      }
+    } catch (error) {
+      console.error('分享失败:', error);
+      alert('分享失败，请重试');
+    }
+  };
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -103,10 +158,10 @@ export default function Card({ petId, onRestart }: { petId: string, onRestart: (
   }, [pet, petId]);
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="min-h-screen bg-[#121212] flex flex-col items-center justify-center p-5"
+      className="min-h-screen bg-[#fcf9f4] flex flex-col items-center justify-center p-5"
     >
       <div className="relative w-[320px] h-[520px] rounded-[36px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.5)] border-[8px] border-[#222] mb-8">
         <canvas 
@@ -117,11 +172,17 @@ export default function Card({ petId, onRestart }: { petId: string, onRestart: (
       </div>
 
       <div className="flex gap-4 w-full max-w-[320px]">
-        <button className="flex-1 py-3.5 bg-[#2A2A2A] text-white rounded-[12px] font-bold flex items-center justify-center gap-2 active:scale-95 transition-transform text-[14px]">
+        <button
+          onClick={handleSaveToAlbum}
+          className="flex-1 py-3.5 bg-[#2A2A2A] text-white rounded-[12px] font-bold flex items-center justify-center gap-2 active:scale-95 transition-transform text-[14px]"
+        >
           <Download className="w-4 h-4" />
           保存到相册
         </button>
-        <button className="flex-1 py-3.5 bg-[#E8C9A0] text-[#000] rounded-[12px] font-bold flex items-center justify-center gap-2 active:scale-95 transition-transform text-[14px]">
+        <button
+          onClick={handleShare}
+          className="flex-1 py-3.5 bg-[#E8C9A0] text-[#000] rounded-[12px] font-bold flex items-center justify-center gap-2 active:scale-95 transition-transform text-[14px]"
+        >
           <Share2 className="w-4 h-4" />
           分享给朋友
         </button>

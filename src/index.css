@@ -8,9 +8,19 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #121212;
-  color: #ffffff;
+  background-color: #fcf9f4;
+  color: #1c1c19;
   overflow-x: hidden;
+}
+
+/* Desktop responsive wrapper */
+.desktop-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fcf9f4 0%, #f6f3ee 100%);
 }
 
 /* Hide scrollbar for smooth swiping */

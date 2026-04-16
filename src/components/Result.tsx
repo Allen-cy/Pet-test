@@ -71,16 +71,16 @@ export default function Result({ petId, onUnlock }: { petId: string, onUnlock: (
 
       {/* Fixed Bottom Action */}
       <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent pb-10">
-        <button 
+        <button
           onClick={onUnlock}
           className="w-full py-4 rounded-full text-lg font-bold shadow-xl active:scale-95 transition-transform flex items-center justify-center gap-2"
           style={{ backgroundColor: pet.accentColor, color: '#1c1c19' }}
         >
           <Sparkles className="w-5 h-5" />
-          解锁完整报告 ¥9.9
+          查看完整报告
         </button>
         <p className="text-center mt-3 text-[10px] opacity-60 uppercase tracking-widest">
-          包含性格深度解析、契合度雷达图及喂养灵感
+          包含性格深度解析及喂养灵感
         </p>
       </div>
     </motion.div>

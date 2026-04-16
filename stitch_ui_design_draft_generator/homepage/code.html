@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Pet Fate | 你的宠物缘分</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#ebe8e3",
+                    "tertiary-fixed-dim": "#e0c299",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#4f453f",
+                    "surface-container-highest": "#e5e2dd",
+                    "on-background": "#1c1c19",
+                    "secondary-fixed": "#bff1a0",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#31302d",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#fedeb3",
+                    "on-primary-fixed": "#2b1705",
+                    "primary": "#72553d",
+                    "on-primary-container": "#fff9f7",
+                    "on-primary-fixed-variant": "#5c412b",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#fcf9f4",
+                    "background": "#fcf9f4",
+                    "surface-dim": "#dcdad5",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#e6bfa2",
+                    "primary-fixed-dim": "#e6bfa2",
+                    "surface-container-low": "#f6f3ee",
+                    "on-secondary-fixed": "#082100",
+                    "on-tertiary-fixed": "#281801",
+                    "outline": "#81746e",
+                    "secondary-fixed-dim": "#a4d486",
+                    "on-tertiary-fixed-variant": "#584324",
+                    "tertiary": "#6e5736",
+                    "surface-container": "#f0ede9",
+                    "inverse-on-surface": "#f3f0eb",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#886f4c",
+                    "primary-fixed": "#ffdcc3",
+                    "secondary": "#3f6928",
+                    "outline-variant": "#d3c3bc",
+                    "on-secondary-container": "#456f2e",
+                    "secondary-container": "#bff1a0",
+                    "on-surface": "#1c1c19",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#fff9f6",
+                    "on-secondary-fixed-variant": "#285012",
+                    "surface-variant": "#e5e2dd",
+                    "surface-tint": "#765840",
+                    "primary-container": "#8d6d54",
+                    "surface": "#fcf9f4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, .serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(20px); }
+        .tonal-stacking { position: relative; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f4]/40 dark:bg-[#1c1c19]/40 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 py-4 max-w-screen-xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#72553d] dark:text-[#E8C9A0]" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-2xl font-serif italic tracking-tight text-[#72553d] dark:text-[#E8C9A0]">Your Pet Fate</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#72553d] dark:text-[#E8C9A0] font-bold text-xs uppercase tracking-widest hover:opacity-80 transition-opacity" href="#">Home</a>
+<a class="text-[#72553d]/60 dark:text-[#E8C9A0]/60 font-bold text-xs uppercase tracking-widest hover:opacity-80 transition-opacity" href="#">History</a>
+<a class="text-[#72553d]/60 dark:text-[#E8C9A0]/60 font-bold text-xs uppercase tracking-widest hover:opacity-80 transition-opacity" href="#">Profile</a>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border-2 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="minimalist studio portrait of a person with calm expression, warm natural lighting, soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3lgJP6NL2J8abLjg0tZ9dbxV4o_iebcVQwn1gDH7XCwkRYqVfH0-r33Ka3gxFu8jjVGuMejlRLC04M_6lXmQ2sfdyro4XsCLcrfR7Uq3AKoHiv7ol1ambQEQzsKePe3xbUVMv6h9UfYTM8ZofTl0FdfnryOaDQ9ypqt8WFcVtOeuOujtU35OWuJ2jZFaiaH7mKBcufrLRWKxDhyQC5I5S7wQKlbkQEMx_0as4qn_xXewopdJOjZxcFlYvJ5QMCxrKpEeD97u-rwQ"/>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-32">
+<!-- Hero Section -->
+<section class="px-6 max-w-screen-xl mx-auto py-12 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-8 order-2 md:order-1">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low text-primary text-xs font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm" data-icon="temp_preferences_custom">temp_preferences_custom</span>
+                    命中注定的相遇
+                </div>
+<h1 class="text-5xl md:text-7xl leading-tight text-on-surface font-headline font-bold">
+                    发现你命中注定的<br/><span class="italic text-primary">毛茸伙伴</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-lg leading-relaxed font-body">
+                    基于性格特征与情感需求，探索 18 道灵魂考题，匹配你的专属缘分。让灵魂在呼吸间找到共鸣。
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="px-10 py-5 bg-primary text-on-primary rounded-full font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary/10">
+                        开始缘分测试
+                    </button>
+<button class="px-10 py-5 bg-transparent border border-outline-variant text-primary rounded-full font-bold text-lg hover:bg-surface-container-low transition-colors">
+                        探索图鉴
+                    </button>
+</div>
+</div>
+<div class="relative order-1 md:order-2">
+<!-- Asymmetric Image Layout -->
+<div class="relative aspect-square w-full">
+<div class="absolute inset-0 bg-primary-fixed opacity-20 rounded-xl rotate-3"></div>
+<div class="absolute inset-4 overflow-hidden rounded-xl bg-surface-container-high shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="close-up of an elegant ginger cat sitting by a sunlit window with soft morning light and dust motes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChH1kdm1boP_G6ddzgE4xz0zACsAzydMChOvsqeLSVl119G6-gsvmJsgmIZVzaCCEaiBheeGv0EPNkwCab7tIUGNwPx21oCeHiucC07t5OXNpk-Fw19sIAiyFjJSE7vJ0WID0Pry4Uhc8n2CmtnA3WI1gfpPtQUV_czOecgM604XsKzR3rF2nu1nnfgEUuHcE9QDg75oSXsTfi3Yx4Mt0CUd9oDFGw26hbZv7NDeS5h3L_Nvi66J6S4IlFygrIOiJWreIsnzuc9x8"/>
+</div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 md:w-64 md:h-64 rounded-xl overflow-hidden border-[12px] border-surface shadow-2xl z-10 rotate-[-6deg]">
+<img class="w-full h-full object-cover" data-alt="adorable golden retriever puppy resting its head on a soft beige knit blanket, warm afternoon sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvqNN4lqWK948kzKtW5YdDFCb6a4mGOr-b1ZPAHDTdALvLvZsqc9RbZ8w8hjxqDeLoOwehRxq-qQsYhTnfAAr0OC5ve5Lk9y2U2kn7ZItCM6lVRQma-6Q0nRqTL5A9mSdKeMIbDHUmp1Bx4_gxGj4GmIfPWAtNwXsbr7hhEO8iPtqJ2_xNCLFBmkqxhs1uXdt3Y9HhFVBRzR_-LcTjqb9eMRh8JWJJ1KJBjCZnNxnMSicK-YqmtAT7uAuamLGAECl9iTeEcRdWwrk"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: The Soul Spectrum -->
+<section class="px-6 max-w-screen-xl mx-auto py-24">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div class="max-w-xl">
+<h2 class="text-4xl font-headline font-bold mb-4">灵魂档案室</h2>
+<p class="text-on-surface-variant">每一个生命都有其独特的灵魂频率。通过我们的档案，预见你未来的伴侣。</p>
+</div>
+<div class="flex gap-2">
+<div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center cursor-pointer hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</div>
+<div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center cursor-pointer hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Large Card (Cats) -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-[#E8C9A0] p-8 min-h-[400px] flex flex-col justify-end">
+<div class="absolute top-0 right-0 p-12 opacity-10 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-9xl" data-icon="pets">pets</span>
+</div>
+<div class="relative z-10">
+<span class="bg-white/30 backdrop-blur-md px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-on-primary-fixed mb-4 inline-block">The Independent Soul</span>
+<h3 class="text-4xl font-headline font-bold text-on-primary-fixed mb-2">灵动猫咪</h3>
+<p class="text-on-primary-fixed-variant max-w-sm mb-6">适合寻求安静陪伴、尊重个人空间、且享受细腻情感流动的你。</p>
+<a class="inline-flex items-center gap-2 font-bold text-on-primary-fixed group-hover:gap-4 transition-all" href="#">
+                            了解匹配细节 <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="absolute right-0 bottom-0 w-1/2 h-full hidden md:block overflow-hidden rounded-l-full">
+<img class="w-full h-full object-cover" data-alt="majestic white cat with blue eyes sitting on a velvet chair, editorial lighting, soft focused background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKN5_qZ2_2L4MtQWmHD64-T3XOdSr69kI_uy2Rorc0N6T7ukNFoz0GU_mAV97zaYJPn2WK5uR8SB4m0woYhalnAgVVznxuWshNscUYautTJ3IPlzdusJjhl3u8-2sVglR4cmeB4wOmXeIZUmft6RG5iP6KZxVNeTKRHRsvNQhhCodooW0ICiiEaGR2z-6buGFkzzKAQmOx7gX_5lthvIpOId341U6Z2SftbpX8RdIJsSvOrW-kqrBqe2EDKcAnRM8KlVi3R4JHZ1M"/>
+</div>
+</div>
+<!-- Small Card (Dogs) -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-secondary-container p-8 min-h-[400px] flex flex-col justify-between">
+<div>
+<span class="bg-white/30 backdrop-blur-md px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-on-secondary-fixed mb-4 inline-block">The Loyal Guardian</span>
+<h3 class="text-3xl font-headline font-bold text-on-secondary-fixed">忠诚犬类</h3>
+</div>
+<div>
+<p class="text-on-secondary-fixed-variant mb-6">活力、热情、无条件的爱。为你的一天注入无限能量。</p>
+<img class="w-full h-full object-cover rounded-lg aspect-video mb-4" data-alt="happy beagle dog in a grassy field, golden hour sun flare, soft blurred flowers in foreground" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZrxdyaN16Udukd7lgjl7JzaJ6V8i6TZbjvuSKpSr4Z6HMAlb4mK59msLIdg2Kkl23GUmc15lTxlRYQrrZHhAg1BJ00NbiwKkAJf3FgCvT0Cm9q6ZxMdFSkJJPkYTxm253pjd82ASlbFKz-eUXBm8BnP7vLr88Zd6BnScEJ3F51-MkId3MrESvTQvCu4W-jUUw1TIN-H9qZ-EcGjDNZdatzB0ILXkyHv4h1lbtsoL2t7TzlXME3PwlKH2SYEYey7Pk-dqZXta0qSI"/>
+</div>
+</div>
+<!-- Bird Card -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low p-8 min-h-[300px] border border-outline-variant/20">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="airplanemode_active">airplanemode_active</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary/60">The Free Spirit</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-2">灵动鸟类</h3>
+<p class="text-on-surface-variant text-sm mb-4">为生活增添旋律与色彩，适合富有创意且细致入微的观察者。</p>
+</div>
+<!-- Rabbit Card -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-[#C9B4E8]/30 p-8 min-h-[300px] flex items-center gap-8">
+<div class="flex-1">
+<span class="text-[10px] font-bold uppercase tracking-widest text-[#5C412B] mb-4 inline-block">The Gentle Heart</span>
+<h3 class="text-3xl font-headline font-bold mb-4">温婉兔类</h3>
+<p class="text-on-surface-variant mb-6 max-w-md">极其敏锐而温柔，适合渴望建立深度、无声默契的灵魂旅者。</p>
+<button class="px-6 py-3 bg-[#72553d] text-white rounded-full text-sm font-bold">查看全部</button>
+</div>
+<div class="w-1/3 aspect-square rounded-full overflow-hidden hidden sm:block">
+<img class="w-full h-full object-cover" data-alt="close-up of a tiny white rabbit in a basket of dried lavender, soft purple and cream tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxyxbwPqpZbmtVgIFib4Ajwv7EBOWJfbBJPm8hFggAhV1WWiMegKuAZy3R_deJetBDgXVBD1WLGATtViaEvvxivOOxUrWN8jhZy63Ga0Z79xo-MZtyCvgcnzqZh6qv_SQlweX-H4-YX0Ah6hvFgfwHXSH2tSdfY5Mqc4Aqg7ZukWBxT1pKR3G1fvZRok-n-4mfw8Sjgpicq8rVwgr_vaorqts0ukb9sIazsWLeV3NwrHM8x_k8XyM3oViiM7C7C7mM7Tx_ceBVBzs"/>
+</div>
+</div>
+</div>
+</section>
+<!-- The 18 Questions Teaser -->
+<section class="bg-surface-container-low py-24">
+<div class="px-6 max-w-screen-xl mx-auto text-center">
+<h2 class="text-4xl md:text-5xl font-headline font-bold mb-6">18 道灵魂考题</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto mb-16 text-lg">这不只是一份问卷，这是一次关于你与生命共存哲学的深度探索。从作息习惯到情感密度，我们帮你理清那些连你自己都未察觉的需求。</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+<div class="p-8 bg-surface rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-3xl mb-4 text-primary" data-icon="nest_clock_farsight_day">nest_clock_farsight_analog</span>
+<h4 class="font-bold mb-2">生活律动</h4>
+<p class="text-xs text-on-surface-variant">清晨的慢跑还是深夜的对酌？</p>
+</div>
+<div class="p-8 bg-surface rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-3xl mb-4 text-primary" data-icon="psychology">psychology</span>
+<h4 class="font-bold mb-2">情感深度</h4>
+<p class="text-xs text-on-surface-variant">是浓烈的依赖还是独立的依偎？</p>
+</div>
+<div class="p-8 bg-surface rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-3xl mb-4 text-primary" data-icon="home_work">home_work</span>
+<h4 class="font-bold mb-2">空间气质</h4>
+<p class="text-xs text-on-surface-variant">极简主义还是温馨繁杂？</p>
+</div>
+<div class="p-8 bg-surface rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-3xl mb-4 text-primary" data-icon="favorite">favorite</span>
+<h4 class="font-bold mb-2">承诺容量</h4>
+<p class="text-xs text-on-surface-variant">你准备好为它预留多少心房？</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial / Story Section -->
+<section class="px-6 max-w-screen-xl mx-auto py-24">
+<div class="relative rounded-xl overflow-hidden bg-primary text-on-primary p-12 md:p-24 flex flex-col items-center text-center">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary to-primary-container"></div>
+</div>
+<span class="material-symbols-outlined text-5xl mb-8" data-icon="format_quote">format_quote</span>
+<p class="text-2xl md:text-4xl font-headline italic leading-snug max-w-4xl mb-12">
+                    “我从未想过我会养一只鹦鹉，但测试告诉我，我需要一个能与我进行‘语言交流’的伙伴。现在，‘奥利’是我写作时最好的听众。”
+                </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="portrait of a woman with glasses and a serene smile, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4TiqITSPgxMY3IVbk1HgztjO2oJD1f_YLH8kls9tqqi4cmM09JHGdqLV4KHnvOAHbGp1H8U-65JYP6Q34KPFu3-dv1K81g0u7UPR8TVkDywIaRBMAWkV2_UXbkVn0vFOReuLsXzTNBdSAOtQem94cE56QL42ZeozDuSeqT0oqlSUd6183ScRcOnvzY2spyZLpzXQ-QXa7ciMQSvImBHxuoFZi04x-wwU3G6wCz1vQOdt-bQhtrDEsci8c5mOH6xvuj5_V8sjslzY"/>
+</div>
+<div class="text-left">
+<p class="font-bold">林婉儿</p>
+<p class="text-xs opacity-60">独立摄影师 &amp; 绯红金刚鹦鹉主人</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-[3rem] bg-[#fcf9f4]/80 dark:bg-[#1c1c19]/80 backdrop-blur-2xl md:hidden shadow-[0_-8px_32px_rgba(114,85,61,0.06)]">
+<div class="flex justify-around items-center pt-3 pb-8 px-8">
+<a class="flex flex-col items-center justify-center bg-[#72553d] text-white dark:bg-[#E8C9A0] dark:text-[#1c1c19] rounded-full px-6 py-2 transition-transform active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-sans text-[10px] uppercase tracking-widest font-bold mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#72553d]/50 dark:text-[#E8C9A0]/50 hover:text-[#72553d] dark:hover:text-[#E8C9A0] transition-colors active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="font-sans text-[10px] uppercase tracking-widest font-bold mt-1">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#72553d]/50 dark:text-[#E8C9A0]/50 hover:text-[#72553d] dark:hover:text-[#E8C9A0] transition-colors active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="person_pin">person_pin</span>
+<span class="font-sans text-[10px] uppercase tracking-widest font-bold mt-1">Profile</span>
+</a>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="bg-surface-container-highest py-16 px-6 hidden md:block">
+<div class="max-w-screen-xl mx-auto grid grid-cols-4 gap-12">
+<div class="col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-2xl font-serif italic text-primary">Your Pet Fate</span>
+</div>
+<p class="text-on-surface-variant max-w-sm">在这里，我们相信每一个生命都有其预设的缘分。致力于用科学与情感，为每一个孤独的灵魂寻找那个对的伴侣。</p>
+</div>
+<div>
+<h5 class="font-bold mb-6 uppercase tracking-widest text-xs">探索</h5>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">性格测试</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">宠物图鉴</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">成功故事</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 uppercase tracking-widest text-xs">关于</h5>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">我们的哲学</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">联系我们</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">隐私政策</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-screen-xl mx-auto mt-16 pt-8 border-t border-outline-variant/30 text-center text-[10px] uppercase tracking-widest text-on-surface-variant/60 font-bold">
+            © 2024 Your Pet Fate. All Rights Reserved. 你的宠物缘分 版权所有.
+        </div>
+</footer>
+</body></html>

@@ -57,14 +57,16 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen w-full max-w-md mx-auto bg-[#121212] text-white relative overflow-hidden shadow-2xl">
-      <AnimatePresence mode="wait">
-        {page === 'home' && <Home key="home" onStart={handleStart} />}
-        {page === 'test' && <Test key="test" onComplete={handleTestComplete} />}
-        {page === 'result' && <Result key="result" petId={resultPet} onUnlock={handleUnlock} />}
-        {page === 'report' && <Report key="report" petId={resultPet} onGenerateCard={handleGenerateCard} />}
-        {page === 'card' && <Card key="card" petId={resultPet} onRestart={handleRestart} />}
-      </AnimatePresence>
+    <div className="desktop-wrapper">
+      <div className="min-h-screen w-full max-w-md mx-auto bg-[#fcf9f4] text-[#1c1c19] relative overflow-hidden shadow-2xl rounded-[2rem]">
+        <AnimatePresence mode="wait">
+          {page === 'home' && <Home key="home" onStart={handleStart} />}
+          {page === 'test' && <Test key="test" onComplete={handleTestComplete} />}
+          {page === 'result' && <Result key="result" petId={resultPet} onUnlock={handleUnlock} />}
+          {page === 'report' && <Report key="report" petId={resultPet} onGenerateCard={handleGenerateCard} />}
+          {page === 'card' && <Card key="card" petId={resultPet} onRestart={handleRestart} />}
+        </AnimatePresence>
+      </div>
     </div>
   );
 }

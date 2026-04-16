@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#ebe8e3",
+                    "tertiary-fixed-dim": "#e0c299",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#4f453f",
+                    "surface-container-highest": "#e5e2dd",
+                    "on-background": "#1c1c19",
+                    "secondary-fixed": "#bff1a0",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#31302d",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#fedeb3",
+                    "on-primary-fixed": "#2b1705",
+                    "primary": "#72553d",
+                    "on-primary-container": "#fff9f7",
+                    "on-primary-fixed-variant": "#5c412b",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#fcf9f4",
+                    "background": "#fcf9f4",
+                    "surface-dim": "#dcdad5",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#e6bfa2",
+                    "primary-fixed-dim": "#e6bfa2",
+                    "surface-container-low": "#f6f3ee",
+                    "on-secondary-fixed": "#082100",
+                    "on-tertiary-fixed": "#281801",
+                    "outline": "#81746e",
+                    "secondary-fixed-dim": "#a4d486",
+                    "on-tertiary-fixed-variant": "#584324",
+                    "tertiary": "#6e5736",
+                    "surface-container": "#f0ede9",
+                    "inverse-on-surface": "#f3f0eb",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#886f4c",
+                    "primary-fixed": "#ffdcc3",
+                    "secondary": "#3f6928",
+                    "outline-variant": "#d3c3bc",
+                    "on-secondary-container": "#456f2e",
+                    "secondary-container": "#bff1a0",
+                    "on-surface": "#1c1c19",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#fff9f6",
+                    "on-secondary-fixed-variant": "#285012",
+                    "surface-variant": "#e5e2dd",
+                    "surface-tint": "#765840",
+                    "primary-container": "#8d6d54",
+                    "surface": "#fcf9f4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fate-gradient-bg {
+            background: radial-gradient(circle at top right, #E8C9A0 0%, transparent 40%),
+                        radial-gradient(circle at bottom left, #72553d20 0%, transparent 40%);
+        }
+        .cat-category-blend {
+            background: linear-gradient(180deg, rgba(44, 36, 32, 0.05) 0%, rgba(107, 78, 55, 0.1) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f4]/40 dark:bg-[#1c1c19]/40 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 py-4 max-w-screen-xl mx-auto">
+<div class="flex items-center gap-2 text-[#72553d] dark:text-[#E8C9A0]">
+<span class="material-symbols-outlined text-2xl" data-icon="auto_awesome">auto_awesome</span>
+<h1 class="text-2xl font-serif italic tracking-tight font-serif text-[#72553d] dark:text-[#E8C9A0]">Your Pet Fate</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-fixed hover:opacity-80 transition-opacity cursor-pointer">
+<img alt="User Profile" data-alt="portrait of a professional man with a kind smile, soft studio lighting, high-end photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7KR6a5byWEk7hF0j5z2KFzx5yfPoURxNm9Pg0JwAmm7s91wRgLgUYBpmLuSLwGL6HgzOa_XGMljh_WcuW3drkn8WesaA6XExLfcy9NtDSg2U3S36Aly4rrQaa2v93ad21g4K0XDWdsBK6Watxph1XHv1Xsn_CIqmber9iw-fkFRPOkogsoBDevNMbyrvlLQIWdl4ITqlSV6mS9ReyRATos8mJzt4UCY5CRvY3IFgHF1dXlJW9GQqgMemD_w57l5lEQFC1cdykwXQ"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 fate-gradient-bg">
+<div class="max-w-xl mx-auto space-y-12">
+<!-- Hero Reveal Section -->
+<section class="text-center space-y-4">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-primary/60">你的宿命指引 · Your Destiny</span>
+<h2 class="text-5xl md:text-6xl font-headline text-on-surface tracking-tight">命运之契</h2>
+</section>
+<!-- Result Card: The Fortune Deck Style -->
+<div class="relative group">
+<!-- Background Glow -->
+<div class="absolute -inset-4 bg-primary-fixed/20 blur-3xl rounded-xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative bg-surface-container-lowest rounded-xl shadow-[0_32px_64px_rgba(114,85,61,0.06)] overflow-hidden transition-transform duration-500 hover:scale-[1.01]">
+<!-- Image with Overlap Break -->
+<div class="relative h-[450px] overflow-hidden">
+<img alt="The Feline Match" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="cinematic close-up of a majestic tuxedo cat with golden eyes resting on a velvet cushion, warm ambient indoor lighting, ethereal atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDgF9MsK4NhSMUDq3_EYAKTo0ArteCpg5__cNSioX46hfmDxJuyWzomne1OaNdWhD45HHNfJYRGYUMJCVqMeJIY-pcYK3RArWT1mtWlk3G9X5ooVDLFQ4cNzanVPjuFOX2vKmv61HrDtj7qXgHGOyAVuDikxLDEdyD6USgIV2eDCFiBEvL1LSwWDNpxnn0eDN-g9sC9l_rqmPAcPSWle8FhVSoIYqIK_haxUIvBTwPZ9hnqZx7Em3BQoH9GtnOAIB2YqAOh3u9pKk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#2C2420]/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 text-white">
+<h3 class="text-4xl font-headline italic mb-1">猫 (Cat)</h3>
+<p class="text-lg font-body opacity-90 tracking-wide">独立灵魂的安静陪伴者</p>
+</div>
+</div>
+<!-- Content Section -->
+<div class="p-8 md:p-12 space-y-8 cat-category-blend">
+<div class="space-y-6">
+<div class="flex gap-2">
+<span class="px-4 py-1.5 rounded-full bg-surface-container-high text-xs font-label tracking-wider text-primary">灵性感应</span>
+<span class="px-4 py-1.5 rounded-full bg-surface-container-high text-xs font-label tracking-wider text-primary">独立边界</span>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline text-2xl text-primary italic">“在静谧中，听见灵魂的回响。”</h4>
+<p class="text-on-surface-variant leading-relaxed font-body text-lg">
+                                    你的灵魂深处拥有一种罕见的宁静力量。正如猫科动物在夜色中穿行，你不随波逐流，始终保持着清晰的自我边界与观察力。你不需要喧闹的认同，更倾向于在高质量的独处中汲取能量。这种对精神自由的追求，预示着你与猫之间存在着一种跨越物种的默契：你们不相互占有，却在彼此的沉默中找到了最深层次的理解。这份宿命的联结并非巧合，而是源于你内心深处对纯粹与真实的渴望，它隐藏在那些未曾言说的习惯中，等待着被彻底唤醒...
+                                </p>
+</div>
+</div>
+<!-- Divider-less Spacing Principle -->
+<div class="pt-8">
+<a class="block w-full text-center bg-primary text-on-primary py-6 rounded-full text-xl font-semibold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all duration-300" href="#">
+                                解锁完整报告 ¥9.9
+                            </a>
+<p class="text-center mt-4 text-xs font-label text-primary/40 uppercase tracking-widest">
+                                包含性格深度解析、契合度雷达图及喂养灵感
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Contextual Insights Bento Fragment -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-low p-8 rounded-xl space-y-4">
+<span class="material-symbols-outlined text-primary" data-icon="auto_stories">auto_stories</span>
+<h5 class="font-headline text-xl italic text-primary">性格底色</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">你的性格中融合了水一般的柔和与火一般的决绝。这种矛盾的平衡使你能够洞察他人忽略的细微情感。</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl space-y-4">
+<span class="material-symbols-outlined text-primary" data-icon="history_edu">history_edu</span>
+<h5 class="font-headline text-xl italic text-primary">契合预言</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">在未来的日子里，一个拥有翡翠般双眸的伙伴将闯入你的生活，它将教你如何重新定义陪伴的含义。</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-[3rem] bg-[#fcf9f4]/80 dark:bg-[#1c1c19]/80 backdrop-blur-2xl shadow-[0_-8px_32px_rgba(114,85,61,0.06)] md:hidden">
+<div class="flex justify-around items-center pt-3 pb-8 px-8">
+<a class="flex flex-col items-center justify-center bg-[#72553d] text-white dark:bg-[#E8C9A0] dark:text-[#1c1c19] rounded-full px-6 py-2 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-sans text-[10px] uppercase tracking-widest font-bold mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#72553d]/50 dark:text-[#E8C9A0]/50 hover:text-[#72553d] dark:hover:text-[#E8C9A0] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="font-sans text-[10px] uppercase tracking-widest font-bold mt-1">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#72553d]/50 dark:text-[#E8C9A0]/50 hover:text-[#72553d] dark:hover:text-[#E8C9A0] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person_pin">person_pin</span>
+<span class="font-sans text-[10px] uppercase tracking-widest font-bold mt-1">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

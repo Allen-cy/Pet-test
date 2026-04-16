@@ -119,33 +119,45 @@
   },
   "hotPaths": [
     {
+      "path": "src/components/Report.tsx",
+      "accessCount": 9,
+      "lastAccessed": 1776326416040,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Card.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1776326374028,
+      "type": "file"
+    },
+    {
+      "path": "src/App.tsx",
+      "accessCount": 5,
+      "lastAccessed": 1776326287036,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Test.tsx",
+      "accessCount": 5,
+      "lastAccessed": 1776326463035,
+      "type": "file"
+    },
+    {
       "path": ".env.example",
       "accessCount": 4,
       "lastAccessed": 1776323437843,
       "type": "file"
     },
     {
-      "path": "src/App.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1776323402352,
+      "path": "src/components/Result.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1776326326174,
       "type": "file"
     },
     {
       "path": "supabase/migrations/001_initial.sql",
       "accessCount": 3,
       "lastAccessed": 1776324080613,
-      "type": "file"
-    },
-    {
-      "path": "src/components/Result.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1776323140260,
-      "type": "file"
-    },
-    {
-      "path": "src/components/Report.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1776323148080,
       "type": "file"
     },
     {
@@ -158,6 +170,18 @@
       "path": ".env",
       "accessCount": 2,
       "lastAccessed": 1776324252902,
+      "type": "file"
+    },
+    {
+      "path": "src/index.css",
+      "accessCount": 2,
+      "lastAccessed": 1776326261397,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Home.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1776326316456,
       "type": "file"
     },
     {
@@ -176,18 +200,6 @@
       "path": "src/data/questions.ts",
       "accessCount": 1,
       "lastAccessed": 1776323140187,
-      "type": "file"
-    },
-    {
-      "path": "src/components/Test.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1776323140219,
-      "type": "file"
-    },
-    {
-      "path": "src/components/Card.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1776323148045,
       "type": "file"
     },
     {
@@ -272,6 +284,42 @@
       "path": "DEPLOY.md",
       "accessCount": 1,
       "lastAccessed": 1776323497503,
+      "type": "file"
+    },
+    {
+      "path": "stitch_ui_design_draft_generator/pet_test_prd.md",
+      "accessCount": 1,
+      "lastAccessed": 1776325954786,
+      "type": "file"
+    },
+    {
+      "path": "stitch_ui_design_draft_generator/aura_whisker/design.md",
+      "accessCount": 1,
+      "lastAccessed": 1776325954842,
+      "type": "file"
+    },
+    {
+      "path": "stitch_ui_design_draft_generator/aura_whisker/DESIGN.md",
+      "accessCount": 1,
+      "lastAccessed": 1776325983250,
+      "type": "file"
+    },
+    {
+      "path": "ui-design/DESIGN.md",
+      "accessCount": 1,
+      "lastAccessed": 1776326032859,
+      "type": "file"
+    },
+    {
+      "path": "ui-design/preview.html",
+      "accessCount": 1,
+      "lastAccessed": 1776326110130,
+      "type": "file"
+    },
+    {
+      "path": "ui-design/preview-dark.html",
+      "accessCount": 1,
+      "lastAccessed": 1776326170499,
       "type": "file"
     }
   ],

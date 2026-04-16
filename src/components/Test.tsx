@@ -15,13 +15,13 @@ export default function Test({ onComplete }: { onComplete: (answers: any[], petI
   const handleOptionClick = (optionIndex: number) => {
     const newAnswers = [...answers];
     const existingAnswerIndex = newAnswers.findIndex(a => a.questionId === question.id);
-    
+
     if (existingAnswerIndex >= 0) {
       newAnswers[existingAnswerIndex] = { questionId: question.id, optionIndex };
     } else {
       newAnswers.push({ questionId: question.id, optionIndex });
     }
-    
+
     setAnswers(newAnswers);
 
     if (!isLastQuestion) {
@@ -64,23 +64,23 @@ export default function Test({ onComplete }: { onComplete: (answers: any[], petI
   const hasAnsweredCurrent = answers.some(a => a.questionId === question.id);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#1a1a1a] text-white">
+    <div className="min-h-screen flex flex-col bg-[#fcf9f4] text-[#1c1c19]">
       {/* Header */}
       <header className="px-5 py-5 flex flex-col gap-2 mt-10">
         <div className="flex justify-between items-center mb-2">
-          <button 
+          <button
             onClick={handlePrev}
-            className={`p-2 -ml-2 text-white/60 transition-opacity ${currentIndex === 0 ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+            className={`p-2 -ml-2 text-[#1c1c19]/60 transition-opacity ${currentIndex === 0 ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
         </div>
-        <div className="text-[11px] text-white/60 mb-2">
+        <div className="text-[11px] text-[#1c1c19]/60 mb-2">
           第 {currentIndex + 1} 题 / 共 {questions.length} 题
         </div>
-        <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
-          <div 
-            className="h-full bg-[#E8C9A0] rounded-full transition-all duration-500 ease-out"
+        <div className="w-full h-1 bg-[#1c1c19]/10 rounded-full overflow-hidden">
+          <div
+            className="h-full bg-[#72553d] rounded-full transition-all duration-500 ease-out"
             style={{ width: `${progress}%` }}
           ></div>
         </div>
@@ -111,31 +111,31 @@ export default function Test({ onComplete }: { onComplete: (answers: any[], petI
                     key={idx}
                     onClick={() => handleOptionClick(idx)}
                     className={`w-full text-left p-[15px] rounded-[12px] transition-all duration-200 flex items-center gap-4 border ${
-                      isSelected 
-                        ? 'bg-[#E8C9A0]/10 border-[#E8C9A0]' 
-                        : 'bg-white/5 border-white/10 hover:border-white/30'
+                      isSelected
+                        ? 'bg-[#E8C9A0]/20 border-[#72553d]'
+                        : 'bg-[#f6f3ee] border-[#1c1c19]/10 hover:border-[#1c1c19]/30'
                     }`}
                   >
                     <span className={`w-7 h-7 rounded-full flex items-center justify-center text-[13px] font-bold ${
-                      isSelected ? 'bg-[#E8C9A0] text-[#000]' : 'bg-white/10 text-white/60'
+                      isSelected ? 'bg-[#72553d] text-white' : 'bg-[#1c1c19]/10 text-[#1c1c19]/60'
                     }`}>
                       {String.fromCharCode(65 + idx)}
                     </span>
-                    <span className="text-[13px] flex-1">{option.text}</span>
+                    <span className="text-[13px] flex-1 text-[#1c1c19]">{option.text}</span>
                   </button>
                 );
               })}
             </div>
-            
+
             {isLastQuestion && hasAnsweredCurrent && (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="mt-auto mb-8"
               >
-                <button 
+                <button
                   onClick={handleFinish}
-                  className="w-full py-[14px] bg-[#E8C9A0] text-[#000] rounded-[30px] font-bold text-[16px] active:scale-95 transition-transform"
+                  className="w-full py-[14px] bg-[#72553d] text-white rounded-[30px] font-bold text-[16px] active:scale-95 transition-transform"
                 >
                   查看结果
                 </button>
