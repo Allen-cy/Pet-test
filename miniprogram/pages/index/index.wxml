@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="logo-section">
+    <view class="paw-icon">🐾</view>
+    <text class="brand-text">Your Pet Fate</text>
+  </view>
+
+  <view class="image-section">
+    <view class="main-image-wrapper">
+      <image class="main-image" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=400" mode="aspectFill" />
+    </view>
+    <view class="sub-image-wrapper">
+      <image class="sub-image" src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=200" mode="aspectFill" />
+    </view>
+  </view>
+
+  <view class="content-section">
+    <text class="title">测测你和哪种\n宠物最有缘</text>
+    <text class="subtitle">18道题，发现你的灵魂伴侣</text>
+  </view>
+
+  <view class="action-section">
+    <text class="stat-text">已有 8,847 人测过</text>
+    <button class="start-btn" bindtap="onStart">开始测试</button>
+  </view>
+</view>

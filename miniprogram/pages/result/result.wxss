@@ -1,0 +1,120 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, {{pet.bgGradientStart}}, {{pet.bgGradientEnd}});
+  color: white;
+  padding: 60rpx 30rpx 200rpx;
+}
+
+.loading-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fcf9f4;
+}
+
+.spinner {
+  width: 64rpx;
+  height: 64rpx;
+  border: 4rpx solid #e0c299;
+  border-top-color: #72553d;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 32rpx;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: #72553d;
+  font-style: italic;
+}
+
+.label {
+  font-size: 20rpx;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0.6;
+  text-align: center;
+  margin-bottom: 16rpx;
+}
+
+.title {
+  font-size: 48rpx;
+  text-align: center;
+  margin-bottom: 40rpx;
+  font-weight: bold;
+}
+
+.result-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 48rpx;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.image-wrapper {
+  position: relative;
+  height: 360rpx;
+}
+
+.pet-image {
+  width: 100%;
+  height: 100%;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30rpx;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.pet-name {
+  display: block;
+  font-size: 64rpx;
+  font-weight: bold;
+  margin-bottom: 8rpx;
+}
+
+.pet-title {
+  font-size: 28rpx;
+  opacity: 0.9;
+}
+
+.card-content {
+  padding: 40rpx;
+}
+
+.tags {
+  display: flex;
+  gap: 16rpx;
+  margin-bottom: 24rpx;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12rpx 24rpx;
+  border-radius: 32rpx;
+  font-size: 24rpx;
+}
+
+.description {
+  font-size: 28rpx;
+  opacity: 0.8;
+  line-height: 1.7;
+}
+
+.cta-section {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40rpx;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8

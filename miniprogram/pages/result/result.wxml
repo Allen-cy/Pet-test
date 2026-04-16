@@ -1,0 +1,33 @@
+<view class="container" wx:if="{{!loading}}">
+  <view class="label">你的宿命指引</view>
+  <view class="title">命运之契</view>
+
+  <view class="result-card">
+    <view class="image-wrapper">
+      <image class="pet-image" src="{{pet.image}}" mode="aspectFill" />
+      <view class="image-overlay">
+        <text class="pet-name">{{pet.emoji}} {{pet.name}}</text>
+        <text class="pet-title">{{pet.title}}</text>
+      </view>
+    </view>
+
+    <view class="card-content">
+      <view class="tags">
+        <block wx:for="{{pet.tags}}" wx:key="index">
+          <view class="tag">{{item}}</view>
+        </block>
+      </view>
+      <text class="description">{{pet.shortDesc}}</text>
+    </view>
+  </view>
+
+  <view class="cta-section">
+    <button class="cta-btn" bindtap="onUnlock">查看完整报告</button>
+    <text class="cta-hint">包含性格深度解析及喂养灵感</text>
+  </view>
+</view>
+
+<view class="loading-container" wx:if="{{loading}}">
+  <view class="spinner"></view>
+  <text class="loading-text">灵魂频率分析中...</text>
+</view>

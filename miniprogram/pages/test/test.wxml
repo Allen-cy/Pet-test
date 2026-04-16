@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="header">
+    <view class="progress-text">第 {{currentIndex + 1}} 题 / 共 {{questions.length}} 题</view>
+    <view class="progress-bar">
+      <view class="progress-fill" style="width: {{progress}}%"></view>
+    </view>
+  </view>
+
+  <view class="question-section">
+    <text class="question-text">{{currentQuestion.text}}</text>
+  </view>
+
+  <view class="options-section">
+    <block wx:for="{{currentQuestion.options}}" wx:key="index">
+      <view
+        class="option-item {{item.selected ? 'selected' : ''}}"
+        bindtap="onSelectOption"
+        data-index="{{index}}"
+      >
+        <view class="option-letter">{{item.letter}}</view>
+        <text class="option-text">{{item.text}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="finish-section" wx:if="{{isLastQuestion && hasAnswered}}">
+    <button class="finish-btn" bindtap="onFinish">查看结果</button>
+  </view>
+</view>

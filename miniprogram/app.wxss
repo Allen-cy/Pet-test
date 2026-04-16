@@ -1,0 +1,72 @@
+/* 全局样式 */
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fcf9f4;
+  color: #1c1c19;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 主色 */
+.primary { color: #72553d; }
+.primary-bg { background-color: #72553d; }
+
+/* 强调色 */
+.accent { color: #E8C9A0; }
+.accent-bg { background-color: #E8C9A0; }
+
+/* 背景色 */
+.surface { background-color: #fcf9f4; }
+.surface-container { background-color: #f6f3ee; }
+
+/* 文字色 */
+.on-surface { color: #1c1c19; }
+.on-surface-60 { color: rgba(28, 28, 25, 0.6); }
+.on-surface-40 { color: rgba(28, 28, 25, 0.4); }
+
+/* 通用按钮样式 */
+.btn-primary {
+  background-color: #72553d;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-primary:active {
+  opacity: 0.9;
+  transform: scale(0.98);
+}
+
+/* 卡片样式 */
+.card {
+  background-color: #f6f3ee;
+  border-radius: 24px;
+  padding: 20px;
+  margin: 16px;
+}
+
+/* 标签样式 */
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  background-color: #f6f3ee;
+  color: #72553d;
+}
+
+/* 通用容器 */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}

@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/test/test",
+    "pages/result/result",
+    "pages/report/report",
+    "pages/card/card"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fcf9f4",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "宠物缘分测试",
+    "navigationStyle": "custom",
+    "backgroundColor": "#fcf9f4",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#1c1c19",
+    "selectedColor": "#72553d",
+    "backgroundColor": "#fcf9f4",
+    "borderStyle": "white",
+    "list": []
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

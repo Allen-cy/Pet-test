@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="header">
+    <text class="header-title">你的专属缘分报告</text>
+  </view>
+
+  <view class="content">
+    <image class="pet-image" src="{{pet.image}}" mode="aspectFill" />
+
+    <view class="tags">
+      <block wx:for="{{pet.tags}}" wx:key="index">
+        <view class="tag">{{item}}</view>
+      </block>
+    </view>
+
+    <view class="section">
+      <view class="section-title">
+        <text class="section-icon">📖</text>
+        <text>为什么适合你</text>
+      </view>
+      <text class="section-text">{{pet.whySuitable}}</text>
+    </view>
+
+    <view class="section highlight">
+      <text class="section-title-sm">你们在一起的样子</text>
+      <text class="quote">"{{pet.dailyScene}}"</text>
+    </view>
+
+    <view class="section">
+      <view class="section-title">
+        <text class="section-icon">💡</text>
+        <text>一个小提醒</text>
+      </view>
+      <text class="section-text">{{pet.advice}}</text>
+    </view>
+  </view>
+
+  <view class="bottom-cta">
+    <button class="generate-btn" bindtap="onGenerateCard">生成我的专属卡片</button>
+  </view>
+</view>

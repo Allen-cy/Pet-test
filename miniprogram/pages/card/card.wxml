@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="card-wrapper">
+    <canvas canvas-id="shareCard" style="width: 320px; height: 520px;" bindlongpress="onSave"></canvas>
+  </view>
+
+  <view class="buttons">
+    <button class="btn save" bindtap="onSave">💾 保存到相册</button>
+    <button class="btn share" bindtap="onShare">📤 分享给朋友</button>
+  </view>
+
+  <view class="restart" bindtap="onRestart">🔄 重新测试</view>
+</view>

@@ -321,6 +321,102 @@
       "accessCount": 1,
       "lastAccessed": 1776326170499,
       "type": "file"
+    },
+    {
+      "path": "miniprogram/project.config.json",
+      "accessCount": 1,
+      "lastAccessed": 1776326663997,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/app.json",
+      "accessCount": 1,
+      "lastAccessed": 1776326665141,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/app.wxss",
+      "accessCount": 1,
+      "lastAccessed": 1776326666227,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/app.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776326667300,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/pages/index/index.wxml",
+      "accessCount": 1,
+      "lastAccessed": 1776326685278,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/pages/index/index.wxss",
+      "accessCount": 1,
+      "lastAccessed": 1776326686351,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/pages/index/index.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776326687473,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/pages/test/test.wxml",
+      "accessCount": 1,
+      "lastAccessed": 1776326712347,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/pages/test/test.wxss",
+      "accessCount": 1,
+      "lastAccessed": 1776326713407,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/pages/test/test.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776326714531,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/pages/result/result.wxml",
+      "accessCount": 1,
+      "lastAccessed": 1776326745557,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/pages/result/result.wxss",
+      "accessCount": 1,
+      "lastAccessed": 1776326746613,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/pages/result/result.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776326747722,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/pages/report/report.wxml",
+      "accessCount": 1,
+      "lastAccessed": 1776326793389,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/pages/report/report.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776326794678,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/pages/report/report.wxss",
+      "accessCount": 1,
+      "lastAccessed": 1776326795759,
+      "type": "file"
     }
   ],
   "userDirectives": []
