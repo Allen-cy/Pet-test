@@ -85,11 +85,21 @@ Page({
     })
   },
 
+  onShareAppMessage: function() {
+    return {
+      title: '🐾 测测我和哪种宠物最有缘',
+      path: '/pages/index/index'
+    }
+  },
+
+  onShareTimeline: function() {
+    return {
+      title: '🐾 宠物缘分测试'
+    }
+  },
+
   onShare: function() {
-    wx.showShareMenu({
-      withShareTicket: true
-    })
-    wx.showToast({ title: '请点击右上角分享', icon: 'none' })
+    wx.showToast({ title: '请点击右上角分享', icon: 'none' }): '请点击右上角分享', icon: 'none' })
   },
 
   onRestart: function() {

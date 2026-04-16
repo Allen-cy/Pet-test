@@ -7,11 +7,11 @@
   </view>
 
   <view class="question-section">
-    <text class="question-text">{{currentQuestion.text}}</text>
+    <text class="question-text">{{questions[currentIndex].text}}</text>
   </view>
 
   <view class="options-section">
-    <block wx:for="{{currentQuestion.options}}" wx:key="index">
+    <block wx:for="{{questions[currentIndex].options}}" wx:key="index">
       <view
         class="option-item {{item.selected ? 'selected' : ''}}"
         bindtap="onSelectOption"

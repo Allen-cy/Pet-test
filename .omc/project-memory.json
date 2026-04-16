@@ -155,6 +155,12 @@
       "type": "file"
     },
     {
+      "path": "miniprogram/pages/index/index.wxml",
+      "accessCount": 4,
+      "lastAccessed": 1776339487325,
+      "type": "file"
+    },
+    {
       "path": "supabase/migrations/001_initial.sql",
       "accessCount": 3,
       "lastAccessed": 1776324080613,
@@ -170,6 +176,12 @@
       "path": "miniprogram/pages/index/index.wxss",
       "accessCount": 3,
       "lastAccessed": 1776336509307,
+      "type": "file"
+    },
+    {
+      "path": "miniprogram/pages/test/test.wxml",
+      "accessCount": 3,
+      "lastAccessed": 1776339474040,
       "type": "file"
     },
     {
@@ -215,9 +227,9 @@
       "type": "file"
     },
     {
-      "path": "miniprogram/pages/index/index.wxml",
+      "path": "miniprogram/pages/test/test.wxss",
       "accessCount": 2,
-      "lastAccessed": 1776336852788,
+      "lastAccessed": 1776339450573,
       "type": "file"
     },
     {
@@ -380,18 +392,6 @@
       "path": "miniprogram/pages/index/index.ts",
       "accessCount": 1,
       "lastAccessed": 1776326687473,
-      "type": "file"
-    },
-    {
-      "path": "miniprogram/pages/test/test.wxml",
-      "accessCount": 1,
-      "lastAccessed": 1776326712347,
-      "type": "file"
-    },
-    {
-      "path": "miniprogram/pages/test/test.wxss",
-      "accessCount": 1,
-      "lastAccessed": 1776326713407,
       "type": "file"
     },
     {

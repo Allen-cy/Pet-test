@@ -14,7 +14,8 @@
   </view>
 
   <view class="content-section">
-    <text class="title">测测你和哪种\n宠物最有缘</text>
+    <text class="title">测测你和哪种</text>
+    <text class="title">宠物最有缘</text>
     <text class="subtitle">18道题，发现你的灵魂伴侣</text>
   </view>
 
