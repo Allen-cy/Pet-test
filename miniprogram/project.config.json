@@ -47,7 +47,7 @@
     "disableSWC": true
   },
   "compileType": "miniprogram",
-  "libVersion": "3.4.6",
+  "libVersion": "3.15.2",
   "appid": "wxd122a09af7e24ff8",
   "projectname": "pet-test",
   "condition": {},

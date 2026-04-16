@@ -161,6 +161,12 @@
       "type": "file"
     },
     {
+      "path": "miniprogram/app.json",
+      "accessCount": 3,
+      "lastAccessed": 1776336346791,
+      "type": "file"
+    },
+    {
       "path": "vercel.json",
       "accessCount": 2,
       "lastAccessed": 1776323439580,
@@ -326,12 +332,6 @@
       "path": "miniprogram/project.config.json",
       "accessCount": 1,
       "lastAccessed": 1776326663997,
-      "type": "file"
-    },
-    {
-      "path": "miniprogram/app.json",
-      "accessCount": 1,
-      "lastAccessed": 1776326665141,
       "type": "file"
     },
     {
